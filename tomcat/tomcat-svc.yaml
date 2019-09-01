@@ -11,4 +11,4 @@ spec:
     # service自身的监听端口
     port: 8080
     # 容器应用监听的端口
-    target: 8080
+    targetPort: 8080
