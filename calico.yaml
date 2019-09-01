@@ -603,7 +603,8 @@ spec:
             # Auto-detect the BGP IP address.
             - name: IP
               value: "autodetect"
-            # Enable IPIP
+            # Enable IPIP only in CrossSubnet
+            # AWS默认IPIP模式会有问题，导致不同宿主到pod或pod之间不互通，因此仅限制在跨子网的情况下才开启IPIP模式
             - name: CALICO_IPV4POOL_IPIP
               value: "CrossSubnet"
             # Set MTU for tunnel device used if ipip is enabled
