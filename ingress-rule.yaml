@@ -9,7 +9,6 @@ spec:
   - host: tomcat.k8s.com
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: tomcat-svc
           servicePort: 8080
